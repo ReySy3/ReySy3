@@ -43,6 +43,42 @@ body {
     transition: .3s;
 }
 
+
+/* Ensure no scrollbars appear unnecessarily */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    width: 100%;
+    height: 100%;
+}
+
+/* Particles container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* Ensure content is scrollable if necessary */
+body {
+    overflow-y: auto; /* Allow scrolling for content */
+}
+
+/* Add styles for other sections to manage their spacing */
+section {
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh; /* Ensure sections fill the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .header.sticky {
     background: var(--bg-color);
 }
